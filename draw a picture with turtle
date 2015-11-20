@@ -1,0 +1,140 @@
+"Talaba Pogrebinsky project 1e 01/14/2015"
+import turtle
+
+def draw_tree(trunk_color, leaf_color):
+    turtle.begin_fill()
+    turtle.fillcolor(trunk_color)
+    turtle.left(90)
+    turtle.forward(30)
+    turtle.left(90)
+    turtle.forward(15)
+    turtle.left(90)
+    turtle.forward(30)
+    turtle.left(90)
+    turtle.forward(15)
+    turtle.end_fill()
+    turtle.penup()
+    turtle.left(90)
+    turtle.forward(32)
+    turtle.right(65)
+    
+    
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.fillcolor(leaf_color)
+    turtle.circle(20)
+    turtle.end_fill()
+    
+#end def
+speed = input('What speed would you like the pen to move (you can say: slow, fast, fastest)? ')
+turtle.speed(speed)
+    
+trunk_color = input('What color would you like the trunk to be? ')
+leaf_color = input('What color would you like the leaves to be? ')
+
+bldg_color = input('What color would you like the buildings to be? ')
+
+def draw_building():
+    turtle.begin_fill()
+    turtle.fillcolor(bldg_color)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(180)
+    turtle.forward(50)
+    turtle.left(45)
+    turtle.forward(30)
+    turtle.right(135)
+    turtle.forward(50)
+    turtle.right(45)
+    turtle.forward(30)
+    turtle.right(135)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.right(135)
+    turtle.forward(30)
+    turtle.right(45)
+    turtle.forward(50)
+    turtle.end_fill()
+    #end def
+
+    #Moving in between and using defs.
+
+draw_building()
+turtle.penup()
+turtle.forward(100)
+turtle.right(90)
+turtle.pendown()
+#tree
+draw_tree(trunk_color, leaf_color)
+turtle.penup()
+turtle.right(135)
+turtle.forward(90)
+turtle.pendown()
+turtle.left(110)
+#tree
+draw_tree(trunk_color, leaf_color)
+turtle.penup()
+turtle.forward(50)
+turtle.right(45)
+turtle.forward(100)
+turtle.pendown()
+turtle.right(80)
+#building
+turtle.pencolor('black')
+draw_building()
+turtle.right(180)
+turtle.penup()
+turtle.forward(400)
+#building
+turtle.pendown()
+draw_building()
+turtle.penup()
+turtle.forward(100)
+turtle.right(90)
+turtle.pendown()
+#building
+turtle.pencolor('black')
+draw_building()
+turtle.penup()
+turtle.forward(100)
+turtle.right(90)
+turtle.pendown()
+#tree
+turtle.right(170)
+draw_tree(trunk_color, leaf_color)
+turtle.penup()
+turtle.forward(50)
+turtle.right(45)
+turtle.forward(100)
+turtle.pendown()
+turtle.right(80)
+#tree
+turtle.left(100)
+draw_tree(trunk_color, leaf_color)
+turtle.penup()
+turtle.forward(50)
+turtle.right(45)
+turtle.forward(100)
+turtle.pendown()
+#tree
+turtle.left(10)
+draw_tree(trunk_color, leaf_color)
+turtle.penup()
+turtle.forward(50)
+turtle.right(45)
+turtle.forward(100)
+turtle.pendown()
+turtle.right(80)
+
+
+
+
+
+
+    
