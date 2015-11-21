@@ -27,7 +27,7 @@ def draw_tree(trunk_color, leaf_color):
     
 #end def
 print("Hello!, im going to draw you a picture!")
-print(next)
+
 print('what speed would you like me to draw?')
 
 turtle.speed = input(" you can type: slow, fast, or fastest: ")
@@ -35,7 +35,8 @@ turtle.speed = input(" you can type: slow, fast, or fastest: ")
 trunk_color = input(" okay, what color tree trunks would you like? ")
 leaf_color  = input(" okay, what color leaves would you like? ")
 bldg_color  = input(" okay, what color buildings would you like? ")
-roof_color  = input(" okay, what color roofs would you like? ")
+roof_color  = bldg_color
+
 
 def draw_building():
     #first square
@@ -54,6 +55,7 @@ def draw_building():
     turtle.left(90)
     #first half of roof
     turtle.begin_fill()
+    turtle.fillcolor(roof_color)
     turtle.right(135)
     turtle.forward(35)
     turtle.right(90)
@@ -66,8 +68,7 @@ def draw_building():
     turtle.left(180)
     turtle.forward(50)
     #second square
-    turtle.begin_fill()
-    turtle.fillcolor(roof_color)
+    
     turtle.left(45)
     turtle.forward(30)
     turtle.right(135)
@@ -76,7 +77,7 @@ def draw_building():
     turtle.forward(30)
     turtle.right(135)
     turtle.forward(50)
-    turtle.end_fill()
+  
     turtle.begin_fill()
     turtle.fillcolor(bldg_color)
     #third square
