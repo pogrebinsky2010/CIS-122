@@ -26,15 +26,19 @@ def draw_tree(trunk_color, leaf_color):
     turtle.end_fill()
     
 #end def
-speed = input('What speed would you like the pen to move (you can say: slow, fast, fastest)? ')
-turtle.speed(speed)
-    
-trunk_color = input('What color would you like the trunk to be? ')
-leaf_color = input('What color would you like the leaves to be? ')
+print("Hello!, im going to draw you a picture!")
+print(next)
+print('what speed would you like me to draw?')
 
-bldg_color = input('What color would you like the buildings to be? ')
+turtle.speed = input(" you can type: slow, fast, or fastest: ")
+    
+trunk_color = input(" okay, what color tree trunks would you like? ")
+leaf_color  = input(" okay, what color leaves would you like? ")
+bldg_color  = input(" okay, what color buildings would you like? ")
+roof_color  = input(" okay, what color roofs would you like? ")
 
 def draw_building():
+    #first square
     turtle.begin_fill()
     turtle.fillcolor(bldg_color)
     turtle.forward(50)
@@ -44,8 +48,26 @@ def draw_building():
     turtle.forward(50)
     turtle.left(90)
     turtle.forward(50)
+    turtle.end_fill()
     turtle.left(180)
     turtle.forward(50)
+    turtle.left(90)
+    #first half of roof
+    turtle.begin_fill()
+    turtle.right(135)
+    turtle.forward(35)
+    turtle.right(90)
+    turtle.forward(35)
+    turtle.right(135)
+    turtle.forward(50)
+    turtle.end_fill()
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(180)
+    turtle.forward(50)
+    #second square
+    turtle.begin_fill()
+    turtle.fillcolor(roof_color)
     turtle.left(45)
     turtle.forward(30)
     turtle.right(135)
@@ -54,6 +76,10 @@ def draw_building():
     turtle.forward(30)
     turtle.right(135)
     turtle.forward(50)
+    turtle.end_fill()
+    turtle.begin_fill()
+    turtle.fillcolor(bldg_color)
+    #third square
     turtle.left(90)
     turtle.forward(50)
     turtle.right(135)
@@ -61,10 +87,21 @@ def draw_building():
     turtle.right(45)
     turtle.forward(50)
     turtle.end_fill()
+    #second half of roof
+    turtle.begin_fill()
+    turtle.fillcolor(roof_color)
+    turtle.right(45)
+    turtle.forward(35)
+    turtle.right(90)
+    turtle.forward(35)
+    turtle.right(135)
+    turtle.forward(50)
+    turtle.right(90)
+    turtle.end_fill()
     #end def
 
     #Moving in between and using defs.
-
+#building
 draw_building()
 turtle.penup()
 turtle.forward(100)
@@ -84,29 +121,37 @@ turtle.forward(50)
 turtle.right(45)
 turtle.forward(100)
 turtle.pendown()
-turtle.right(80)
+turtle.left(20)
 #building
 turtle.pencolor('black')
+
 draw_building()
 turtle.right(180)
 turtle.penup()
 turtle.forward(400)
 #building
 turtle.pendown()
+turtle.left(90)
 draw_building()
 turtle.penup()
 turtle.forward(100)
 turtle.right(90)
-turtle.pendown()
+
 #building
 turtle.pencolor('black')
+turtle.left(180)
+turtle.forward(225)
+turtle.left(90)
+turtle.forward(200)
+turtle.right(270)
+turtle.pendown()
 draw_building()
 turtle.penup()
 turtle.forward(100)
 turtle.right(90)
 turtle.pendown()
 #tree
-turtle.right(170)
+
 draw_tree(trunk_color, leaf_color)
 turtle.penup()
 turtle.forward(50)
@@ -123,7 +168,8 @@ turtle.right(45)
 turtle.forward(100)
 turtle.pendown()
 #tree
-turtle.left(10)
+turtle.left(20)
+
 draw_tree(trunk_color, leaf_color)
 turtle.penup()
 turtle.forward(50)
