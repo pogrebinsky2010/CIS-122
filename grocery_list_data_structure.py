@@ -1,4 +1,4 @@
-'''valentines shopping cart list Talaba Pogrebinsky lab3d'''
+G'''valentines shopping cart list Talaba Pogrebinsky lab3d'''
 
 product_list = ['cards', 'flowers', 'chocolates', 'heart boxes', 'neklace', 'braclet']
 price_list = [2.95, 19.99, 10.99, 15.99, 100.00, 75.00]
